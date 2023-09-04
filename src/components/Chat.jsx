@@ -53,9 +53,9 @@ export default function Chat({ room }) {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center gap-y-12">
+    <div className="h-screen flex flex-col items-center justify-center gap-y-12 px-4">
       <h1 className="text-4xl font-semibold">{room} room</h1>
-      <div className="border-2 border-gray-200 flex flex-col p-4 rounded-md w-1/2 h-1/2 overflow-auto">
+      <div className="border-2 border-gray-200 flex flex-col p-4 rounded-md w-full sm:w-1/2 h-1/2 overflow-auto">
         {messages.map((item, index) => (
           <div className="flex items-center gap-x-3" key={index}>
             <h1 className="font-bold">{item.name}</h1>
@@ -67,13 +67,13 @@ export default function Chat({ room }) {
         <input
           type="text"
           value={newMessage}
-          className="border-2 py-2 px-4 rounded-md outline-blue-700 mr-2"
+          className="w-full sm:w-auto border-2 py-2 px-4 rounded-md outline-blue-700 mr-2"
           placeholder="Type your message"
           onChange={(event) => setNewMessage(event.target.value)}
         />
         <button
           type="submit"
-          className="bg-blue-700 text-white px-4 py-2 rounded-md active:translate-y-[4px] transition-all duration-300"
+          className="bg-blue-700 text-white px-4 py-2 rounded-md active:translate-y-[4px] transition-all duration-300 mt-4"
         >
           Send message
         </button>

@@ -31,7 +31,7 @@ export default function App() {
   return (
     <>
       {room ? (
-        <Chat room={room} />
+          <Chat room={room} />
       ) : (
         <div className="flex flex-col items-center justify-center gap-y-4 h-screen">
           <label className="text-3xl font-semibold">Enter Room Name:</label>
