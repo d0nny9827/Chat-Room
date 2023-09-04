@@ -57,9 +57,9 @@ export default function Chat({ room }) {
       <h1 className="text-4xl font-semibold">{room} room</h1>
       <div className="border-2 border-gray-200 flex flex-col p-4 rounded-md w-full sm:w-1/2 h-1/2 overflow-auto">
         {messages.map((item, index) => (
-          <div className="flex items-center gap-x-3" key={index}>
-            <h1 className="font-bold">{item.name}</h1>
-            {item.text}
+          <div className="flex items-center gap-x-3 mb-2" key={index}>
+            <h1 className="font-bold text-xs sm:text-base">{item.name}</h1>
+            <span className="text-xs sm:text-base">{item.text}</span>
           </div>
         ))}
       </div>
